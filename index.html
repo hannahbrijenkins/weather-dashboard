@@ -4,35 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/5ad1de89b4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
         <h1>Weather Dashboard</h1>
     </header>
-    <main>
-        <div class="currentDay">
-            <h2>City Name</h2>
-            <p>Temp</p>
-            <p>Humidity</p>
-            <p>Wind Speed</p>
-            <p>UV Index</p>
-        </div>
-        <div class="forecast">
-            <h3>5-Day Forecast:</h3>
-            <div><p>Day 1</p></div>
-            <div><p>Day 2</p></div>
-            <div><p>Day 3</p></div>
-            <div><p>Day 4</p></div>
-            <div><p>Day 5</p></div>
-        </div>
-    </main>
-    <aside>
-        <h3>Search for a City:</h3>
-        <input type="text" placeholder="search...">
-        <button type="submit"></button>
-        <div class="citiesSearched">
-            <button type="submit"></button>
-        </div>
-    </aside>
+    <div class="bodyWrapper">
+        <aside class="cities">
+            <h3 class="searchTitle">Search for a City:</h3>
+            <input class="searchBar" type="text">
+            <button class="submit" type="submit"><span style="color: white;"><i class="fas fa-search-location fa-sm"></i></span></button>
+            <div class="searchedCity">City Name</div>
+        </aside>
+        <main>
+            <div>
+                <h2>City Name</h2>
+                <p>Temp</p>
+                <p>Humidity</p>
+                <p>Wind Speed</p>
+                <p>UV Index</p>
+            </div>
+            <div>
+                <h3>5-Day Forecast:</h3>
+                <div><p>Day 1</p></div>
+                <div><p>Day 2</p></div>
+                <div><p>Day 3</p></div>
+                <div><p>Day 4</p></div>
+                <div><p>Day 5</p></div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

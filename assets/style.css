@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --primar-color: #6042f5;
+    --secondary-color: #007bff;
+    --tertiary-color: #4a4a4a;
+    --background-color: rgb(248, 248, 248);
+    --border-color: rgb(219, 219, 219);
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: var(--tertiary-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+.bodyWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin: 2%; */
+}
+aside {
+    width: 30%;
+    background-color: var(--background-color);
+    /* margin-right: 1%; */
+}
+main {
+    width: 70%;
+    /* margin-left: 1%; */
+}
+.searchTitle {
+    padding: 15px;
+}
+.searchBar {
+    /* margin: 5px; */
+    border: 1px;
+    height: 30px;
+    width: 70%;
+    margin-left: 15px;
+    border: solid 1px var(--border-color);
+    border-radius: 5px;
+}
+.submit {
+    background-color: var(--secondary-color);
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+}
+.searchedCity {
+    background-color: white;
+    margin: 15px;
+    padding: 10px;
+    border: solid 1px var(--border-color);
+}
