@@ -59,3 +59,28 @@ main {
     padding: 10px;
     border: solid 1px var(--border-color);
 }
+.currentCityToday {
+    margin: 15px;
+    border: solid 1px var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+.mainTitles {
+    font-size: 35px;
+}
+.currentCityDetails {
+    margin-top: 15px;
+}
+.forecast {
+    margin: 15px;
+    padding: 15px;
+}
+.forcastDay {
+    width: 20%;
+    margin: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+.forecastContainer {
+    display: flex;
+}
