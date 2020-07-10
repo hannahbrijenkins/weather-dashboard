@@ -14,8 +14,8 @@
     <div class="bodyWrapper">
         <aside class="cities">
             <h3 class="searchTitle">Search for a City:</h3>
-            <input class="searchBar" type="text">
-            <button class="submit" type="submit"><span style="color: white;"><i class="fas fa-search-location fa-sm"></i></span></button>
+            <input class="searchBar" type="text" id="searchTerm">
+            <button onclick="citySearch()" class="submit" type="submit"><span style="color: white;"><i class="fas fa-search-location fa-sm"></i></span></button>
             <div class="searchedCity">City Name</div>
         </aside>
         <main>
@@ -38,5 +38,6 @@
             </div>
         </main>
     </div>
+    <script src="assets/script.js"></script>
 </body>
 </html>
