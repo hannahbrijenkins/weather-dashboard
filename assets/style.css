@@ -28,11 +28,9 @@ header {
 aside {
     width: 30%;
     background-color: var(--background-color);
-    /* margin-right: 1%; */
 }
 main {
     width: 70%;
-    /* margin-left: 1%; */
 }
 .searchTitle {
     padding: 15px;
@@ -55,9 +53,16 @@ main {
 }
 .searchedCity {
     background-color: white;
-    margin: 15px;
+    margin: 10px;
     padding: 10px;
     border: solid 1px var(--border-color);
+    width: 90%;
+    
+}
+.citySideBar {
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
 }
 .currentCityToday {
     margin: 15px;
@@ -83,4 +88,13 @@ main {
 }
 .forecastContainer {
     display: flex;
+}
+.lowUV {
+    background-color: green;
+}
+.moderateUV {
+    background-color: yellow;
+}
+.highUV {
+    background-color: red;
 }
