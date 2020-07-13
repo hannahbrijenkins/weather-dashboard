@@ -85,6 +85,8 @@ main {
     margin: 10px;
     background-color: var(--secondary-color);
     border-radius: 5px;
+    height: auto;
+    padding: 10px;
 }
 .forecastContainer {
     display: flex;

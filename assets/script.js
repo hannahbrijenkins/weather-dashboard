@@ -17,7 +17,7 @@ function citySearch() {
         cityHumidityStatus(data);
         cityWindStatus(data);
         cityUVStatus(data);
-        getForecastDate(data);
+        getForecast(data);
     })
 }
 
@@ -39,7 +39,6 @@ function cityToday(data) {
         var cityName = document.getElementById("cityName")
         // changes innerHTML of city name
         cityName.innerHTML = name
-        // select element
 }
 
 function cityTempStatus(data) {
@@ -97,20 +96,109 @@ function cityUVStatus(data) {
     
 }
 
-function getForecastDate(data) {
+function getForecast(data) {
     var name = (data.name);
     
-    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=107bb383ee91eb004de630bb7cda7b17")
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=107bb383ee91eb004de630bb7cda7b17&units=imperial")
     .then(function(response){
-        // console.log(response);
         return response.json();
     })
     .then(function(data) {
-        var forDate = (data.list[6].dt_txt);
-        
+        console.log(data);
+        getDateOne(data);
+        getDateTwo(data)
+        getDateThree(data)
+        getDateFour(data)
+        getDateFive(data)
 })}
 
-function getFormattedDate(data) {
+function getDateOne(data) {
     var forDate = (data.list[6].dt_txt);
-    
+    var forIcon = (data.list[6].weather[0].icon);
+    var forTemp = (data.list[6].main.temp);
+    var forHum = (data.list[6].main.humidity);
+    console.log(forTemp);
+    // get element by ID
+    var forecastDate = document.getElementById("forecastDateOne");
+    var forecastIcon = document.getElementById("forecastIconOne");
+    var forecastTemp = document.getElementById("forecastTempOne");
+    var forecastHum = document.getElementById("forecastHumOne");
+    // changes innerHTML of city name
+    forecastDate.innerHTML = forDate;
+    forecastIcon.src = "http://openweathermap.org/img/w/" + forIcon + ".png";
+    forecastTemp.innerHTML = "Tempurature " + forTemp + "° F";
+    forecastHum.innerHTML = "Humidity:  " + forHum + "%";
+
+}
+
+function getDateTwo(data) {
+    var forDate = (data.list[12].dt_txt);
+    var forIcon = (data.list[12].weather[0].icon)
+    var forTemp = (data.list[12].main.temp)
+    var forHum = (data.list[12].main.humidity);
+    console.log(forDate);
+    // get element by ID
+    var forecastDate = document.getElementById("forecastDateTwo");
+    var forecastIcon = document.getElementById("forecastIconTwo");
+    var forecastTemp = document.getElementById("forecastTempTwo");
+    var forecastHum = document.getElementById("forecastHumTwo");
+    // changes innerHTML of city name
+    forecastDate.innerHTML = forDate;
+    forecastIcon.src = "http://openweathermap.org/img/w/" + forIcon + ".png";
+    forecastTemp.innerHTML = "Tempurature " + forTemp + "° F";
+    forecastHum.innerHTML = "Humidity:  " + forHum + "%";
+}
+
+function getDateThree(data) {
+    var forDate = (data.list[14].dt_txt);
+    var forIcon = (data.list[14].weather[0].icon)
+    var forTemp = (data.list[14].main.temp)
+    var forHum = (data.list[14].main.humidity);
+    console.log(forDate);
+    // get element by ID
+    var forecastDate = document.getElementById("forecastDateThree");
+    var forecastIcon = document.getElementById("forecastIconThree");
+    var forecastTemp = document.getElementById("forecastTempThree");
+    var forecastHum = document.getElementById("forecastHumThree");
+    // changes innerHTML of city name
+    forecastDate.innerHTML = forDate;
+    forecastIcon.src = "http://openweathermap.org/img/w/" + forIcon + ".png";
+    forecastTemp.innerHTML = "Tempurature " + forTemp + "° F";
+    forecastHum.innerHTML = "Humidity:  " + forHum + "%";
+}
+
+function getDateFour(data) {
+    var forDate = (data.list[18].dt_txt);
+    var forIcon = (data.list[18].weather[0].icon)
+    var forTemp = (data.list[18].main.temp)
+    var forHum = (data.list[18].main.humidity);
+    console.log(forDate);
+    // get element by ID
+    var forecastDate = document.getElementById("forecastDateFour");
+    var forecastIcon = document.getElementById("forecastIconFour");
+    var forecastTemp = document.getElementById("forecastTempFour");
+    var forecastHum = document.getElementById("forecastHumThree");
+    // changes innerHTML of city name
+    forecastDate.innerHTML = forDate;
+    forecastIcon.src = "http://openweathermap.org/img/w/" + forIcon + ".png";
+    forecastTemp.innerHTML = "Tempurature " + forTemp + "° F";
+    forecastHum.innerHTML = "Humidity:  " + forHum + "%";
+}
+
+function getDateFive(data) {
+    var forDate = (data.list[30].dt_txt);
+    var forIcon = (data.list[30].weather[0].icon)
+    var forTemp = (data.list[30].main.temp)
+    var forHum = (data.list[30].main.humidity);
+    console.log(forDate);
+    // get element by ID
+    var forecastDate = document.getElementById("forecastDateFive");
+    var forecastIcon = document.getElementById("forecastIconFive");
+    var forecastTemp = document.getElementById("forecastTempFive");
+    var forecastHum = document.getElementById("forecastHumThree");
+    // changes innerHTML of city name
+    forecastDate.innerHTML = forDate;
+    forecastIcon.src = "http://openweathermap.org/img/w/" + forIcon + ".png";
+    forecastTemp.innerHTML = "Tempurature " + forTemp + "° F";
+    forecastHum.innerHTML = "Humidity:  " + forHum + "%";
 }
