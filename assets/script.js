@@ -17,6 +17,7 @@ function citySearch() {
         cityHumidityStatus(data);
         cityWindStatus(data);
         cityUVStatus(data);
+        getForecastDate(data);
     })
 }
 
@@ -82,15 +83,34 @@ function cityUVStatus(data) {
         console.log(UVlon , UVlat);
         console.log(UV);
         var cityUV = document.getElementById("cityUV");
-        cityUV.innerHTML = "UV Index: " + UV;
+        cityUV.innerHTML = UV;
         if (UV <= 2) {
         cityUV.classList.add("lowUV");
-        } else if (UV > 2 || UV <= 7) {
+        } 
+        else if (UV > 2 && UV <= 7) {
         cityUV.classList.add("moderateUV");
-    }
-        else (UV > 7) ;{
+        }
+        else {
         cityUV.classList.add("highUV");
         }
     })
+    
+}
+
+function getForecastDate(data) {
+    var name = (data.name);
+    
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + name + "&appid=107bb383ee91eb004de630bb7cda7b17")
+    .then(function(response){
+        // console.log(response);
+        return response.json();
+    })
+    .then(function(data) {
+        var forDate = (data.list[6].dt_txt);
+        
+})}
+
+function getFormattedDate(data) {
+    var forDate = (data.list[6].dt_txt);
     
 }

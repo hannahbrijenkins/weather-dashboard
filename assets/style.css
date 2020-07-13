@@ -90,11 +90,21 @@ main {
     display: flex;
 }
 .lowUV {
-    background-color: green;
+    background-color: rgb(0, 114, 0);
 }
 .moderateUV {
-    background-color: yellow;
+    background-color: rgb(255, 230, 1);
 }
 .highUV {
-    background-color: red;
+    background-color: rgb(228, 2, 2);
+}
+.UVbutton {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+.UVbutton:visited, .UVbutton:active{
+    border: none;
 }
